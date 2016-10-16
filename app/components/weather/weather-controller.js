@@ -1,7 +1,7 @@
 	function WeatherController(){
 		var wc = this;
 		var weatherService = new WeatherService();
-		$.get('/-weather-widget.html', function(data){
+		$.get('inspire/-weather-widget.html', function(data){
 			$('.main-container').append(data)
 		})
 		injectWeather();

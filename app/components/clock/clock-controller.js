@@ -1,6 +1,6 @@
 ClockController()
 function ClockController(){
-    $.get('/-clock.html', function(data){
+    $.get('/inspire/-clock.html', function(data){
         $('.main-container').append(data)
         injectDate();
         setInterval(function(){injectTime()}, 1000);

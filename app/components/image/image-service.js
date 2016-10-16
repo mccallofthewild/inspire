@@ -1,5 +1,5 @@
 function ImageService() {
-	var url = 'http://bcw-getter.herokuapp.com/?url=';
+	var url = 'https://bcw-getter.herokuapp.com/?url=';
 	var url2 = 'http://www.splashbase.co/api/v1/images/random'
 	// url2 = 'https://source.unsplash.com/category/nature/800x600'
 	var apiUrl = url + encodeURIComponent(url2);
