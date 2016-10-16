@@ -1,0 +1,424 @@
+// colors from colorhunt.co/c/1649    
+
+$colorA: #F0F5F9;
+$colorB: #C9D6DF;
+$colorC: #52616B;
+$colorD: #1E2022;
+
+$black: #101010;
+$white: #FAFAFA;
+$blue:#3EC1D3;
+$offWhite:#acacac;
+// Fonts 
+    $fontA: 'Rubik', sans-serif;
+    $fontB: 'Chathura', sans-serif;
+    $fontC: 'Stardos Stencil', cursive;                    
+
+@keyframes slideToLeft{
+    from{margin-left:0;}
+    to{margin-left:-100%;}
+}  
+@import url('https://fonts.googleapis.com/css?family=Bayon');
+
+
+body{
+    background-color:$black;
+    margin:0px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: $fontA;
+    // background-blend-mode: luminosity;
+}
+.accent{
+    color:$blue;
+}
+.main-container{
+    height:100%;
+    width:100%;
+}
+    .goal-area-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items:center;
+        height:100%;
+        width:20%;
+        z-index: 200000;
+        position: fixed;
+        color:$white;
+        // background-color:$black;
+        padding:1%;
+        // margin-left:-10%;
+        // transition: all 1s ease-out;
+
+        &:hover{
+            // transition: all 0.5s ease-out;
+            // margin-left:0%;
+        }
+    }
+        .goal-header-container{
+            width:100%;
+            text-align: center;
+            border-bottom: 2px solid $white;
+            background-color:$black;
+            padding-top:5%;
+            // padding-left:100%;
+            .goal-heading{
+                font-size: 1.5rem;
+                text-transform: uppercase;
+            }
+        }
+        .goal-container{
+            display: flex;
+            flex-direction: row;
+            height:100%;
+            width:100%;
+            justify-content: flex-start;
+            align-items:center;
+        }
+            .goal-timeperiod-container{
+                display: flex;
+                display: none;
+                flex-direction: row;
+                justify-content: space-around;
+                align-content: stretch;
+                flex-wrap:wrap;
+                height:100%;
+                width:100%;
+            }
+                .timeperiod-container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center; 
+                    align-items: center;
+                    width:100%;
+                    background:$black;
+                    border-right:2px solid $white;
+                    color:$offWhite;
+                    &.active{
+                            border-bottom: 2px solid $white;
+                            color:$white;
+                            background-color:$black;
+                            z-index: 2;
+                            border-right:none;
+                        }
+                    &:hover{
+                        cursor:pointer;
+                    }
+                }
+            .goal-list-container{
+                height:100%;
+                width:100%;
+                padding:0% 2%;
+            }
+                .goal-list{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-content: flex-start;
+                    flex-wrap:wrap;
+                    height:100%;
+                    width:100%;
+                    overflow-y:scroll;
+                    margin-top:25%;
+                }
+                    .goal{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center; 
+                        align-items: flex-end;
+                        padding-right:5%;
+                        height:3rem;
+                        overflow-y:scroll;
+                        width:100%;
+                        border-bottom: 1px solid $white;
+                        background-color:$black;
+                        margin:4% 0;
+                        .goal-text-normal{
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-start;
+                            margin:1em;
+                            i{
+                                margin: 2px 5px;
+                            }
+                        }
+                        i{
+                            color:$blue;
+                        }
+                    }
+                    .add-goal-container{
+                    }
+                        .add-goal{
+                            width:100%;
+                            form{
+                                margin:0 10px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                width:100%;
+                                i{
+                                    color:$blue;
+                                    font-size: 2rem;
+                                }
+                                input{
+                                    height: 1rem;
+                                    padding: 1.5rem;
+                                    margin: 0%;
+                                    font-size: 1rem;
+                                    background: transparent;
+                                    border: none;
+                                    color:$white;
+                                    &:placeholder{
+                                        color:$white;
+                                        &-shown{
+                                            color:$white;
+                                        }
+                                    }
+                                    &:focus{
+                                        outline:none;
+                                    }
+                                }
+                            }
+                        }
+.image-info-container{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px 10px;
+    font-size: 10px;
+    z-index: 9999999;
+    a{
+        text-decoration: none; color:inherit;
+        &:visited{
+            text-decoration: none; color:inherit;
+        }
+        &:hover{
+            text-decoration: none; color:inherit;
+            cursor: pointer;
+        }
+    }
+}
+
+.weather-widget-container{
+    color: white;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+
+
+.quote-container{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    bottom: 2%;
+    right: 0;
+    right: 33%;
+    width: 33%;
+    color: white;
+    z-index: 22;
+    .author-overlay{
+        position: absolute;
+        top: 0;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background: rgba(16, 16, 16, 0.85);
+        opacity:0;
+        transition:all 500ms linear;
+        &:hover{
+            opacity:1;
+        }
+    }
+}
+
+
+.clock-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    text-align:center;
+    font-size:2rem;
+    font-family: 'Bowlby One', cursive;
+    text-transform: uppercase;
+    span{
+        margin-top:-0.5em;
+    }
+    .clock-words-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:100%;
+        width:33%;
+        background: $black;
+        padding:5%;
+        margin:5%;
+        .time-container{
+            margin-bottom:10%;
+        }
+        .normal-words{
+            // font-size:2rem;
+            // font-family:$fontB;
+        }
+        .info-words{
+            color:$blue;
+            // font-size: 5rem;
+        }
+    }
+}
+
+
+.portrait-only-overlay{
+    display: none;
+}
+
+@media only screen and (orientation:portrait){
+    .portrait-only-overlay{
+        display: flex;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background: black;
+        left: 0;
+        top: 0;
+        z-index: 9999999;
+        color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        text-align: center;
+        i{
+            color:$blue;
+        }
+    }
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    html{
+          font-size:6px;
+      }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      html{
+          font-size:7px;
+      }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+      font-size:9px;
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+      font-size:10px;
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}

@@ -7,9 +7,10 @@ function WeatherService() {
 	this.getWeather = function (callWhenDone) {
 		var w = localStorage.getItem('weather');
 		if (w) {
-			w = JSON.parse(w);
-			console.log('Weather Data:', w)
-			return callWhenDone(w)
+			var wthr = JSON.parse(w);
+			var weather  = JSON.parse(wthr)
+			console.log(weather)
+			return callWhenDone(weather)
 		}
 
 		$.get(apiUrl, function (res) {

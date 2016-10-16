@@ -3,37 +3,47 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inspire</title>
-	<link rel="stylesheet" href="assets/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="bundle.css">
+	<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Averia+Sans+Libre|Bayon|Chathura|Comfortaa|Economica|Istok+Web|Michroma|Offside|Quantico|Rajdhani|Stardos+Stencil|Unica+One|Wallpoet" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css?family=Bowlby+One|Droid+Serif" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Six+Caps" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Bowlby+One|Rubik" rel="stylesheet">
+
 </head>
+<body id="body" style="background-image:url('https://source.unsplash.com/collection/385761/1600x900')">
+	<div class="main-container">
 
-<body id="body">
-	<div id="weather">
+
+
+
+
+
+
 
 	</div>
-
-	<div id="quote">
-
+	<div class="portrait-only-overlay">
+		<span class="media-rotate-text">
+			Rotate Your Screen to Use
+		</span>
+		<i class="fa fa-repeat fa-2x"></i>
 	</div>
+<script src="app/jquery-3.1.1.min.js"></script>
+<script src="app/init.js"></script>
+<script src="app/components/weather/weather-service.js"></script>
+<script src="app/components/image/image-service.js"></script>
+<script src="app/components/quote/quote-service.js"></script>
+<script src="app/components/goal/goal-service.js"></script>
 
-	<div id="todo">
-
-	</div>
-
-
-
-
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	<script src="app/init.js"></script>
-	<script src="app/components/weather/weather-service.js"></script>
-	<script src="app/components/image/image-service.js"></script>
-	<script src="app/components/quote/quote-service.js"></script>
-	<script src="app/components/todo/todo-service.js"></script>
-
-	<!--Load your scripts below-->
-	<script src="app/components/weather/weather-controller.js"></script>
-	<script src="app/components/image/image-controller.js"></script>
-	<script src="app/components/quote/quote-controller.js"></script>
-	<script src="app/components/todo/todo-controller.js"></script>
+<script src="app/components/application-controller.js"></script>
+<script src="app/components/image/image-controller.js"></script>
+<script src="app/components/quote/quote-controller.js"></script>
+<script src="app/components/goal/goal-controller.js"></script>
+<script src="app/components/weather/weather-controller.js"></script>
+<script src="app/components/clock/clock-controller.js"></script>
 
 </body>
 
