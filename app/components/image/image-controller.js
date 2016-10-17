@@ -1,4 +1,5 @@
 (function(){
+	// Fully functional but I ended up using https://source.unsplash.com/ instead!
 	// ImageController();
 	function ImageController(){
 		var imageService = new ImageService()

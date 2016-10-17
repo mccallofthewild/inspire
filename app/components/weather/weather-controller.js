@@ -12,7 +12,8 @@
 				var kelvin = weather.main.temp;
 				var celsius = kelvin - 273.15;
 				var fahrenheit = (celsius - 32)*5/9;
-				var humanTemperature = description.includes('rain')? {adjective:"rainy", article:"an", item:"umbrella"} : fahrenheit<50? {adjective:"chilly", item:"jacket"} : fahrenheit<80? {adjective:"gorgeous", item:"picnic basket"} : fahrenheit<90? {adjective:"hot", item:"sunscreen"} : {adjective:"a pit of fiery lava", item:"a Mars exploration suit"};
+				var humanTemperature = description.includes('rain')? {adjective:"rainy", article:"an", item:"umbrella"} : fahrenheit<50? {adjective:"chilly", item:"jacket"} : fahrenheit<80? {adjective:"beautiful", item:"smile"} : fahrenheit<100? {adjective:"hot", item:"sandals"} : 
+				{adjective:"fiery lava pit from hell", item:"Mars exploration suit"};
 				$('#weather-adjective').html(humanTemperature.adjective)
 				$('#weather-object').html(humanTemperature.article? "your" + " " + humanTemperature.item : "your" + " " + humanTemperature.item)
 				$('#weather-location').html(weather.name)

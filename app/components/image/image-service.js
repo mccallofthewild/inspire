@@ -1,3 +1,7 @@
+
+
+// Fully functional but I ended up using https://source.unsplash.com/ instead!
+
 function ImageService() {
 	var url = 'https://bcw-getter.herokuapp.com/?url=';
 	var url2 = 'http://www.splashbase.co/api/v1/images/random'
