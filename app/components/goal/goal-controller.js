@@ -12,7 +12,7 @@ function GoalController(){
 		$('.goal-list').prepend(template)
 	}
 
-	$.get('/inspire/-goals.html', function(data){
+	$.get(window.location.pathname + '-goals.html', function(data){
     	$('.main-container').append(data)
 		updateAllGoals()
 	})

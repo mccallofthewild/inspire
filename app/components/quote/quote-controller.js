@@ -2,7 +2,7 @@
 	QuoteController();
 	function QuoteController(){
 		var quoteService = new QuoteService();
-		$.get('/inspire/-quote.html', function(data){
+		$.get(window.location.pathname + '-quote.html', function(data){
 			$('.main-container').append(data)
 		})
 	

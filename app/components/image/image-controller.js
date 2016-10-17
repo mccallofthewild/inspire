@@ -2,7 +2,7 @@
 	// ImageController();
 	function ImageController(){
 		var imageService = new ImageService()
-		$.get('/inspire/-image-tag.html', function(data){
+		$.get(window.location.pathname + '-image-tag.html', function(data){
 			$('.main-container').append(data)
 		})
 		imageService.getImage(function(imageData){
