@@ -7,7 +7,7 @@
 		injectWeather();
 		function injectWeather(){
 			weatherService.getWeather(function(weather){
-				console.log("in injectWeather")
+				console.log(weather)
 				var description = weather.weather[0].description;
 				var kelvin = weather.main.temp;
 				var celsius = kelvin - 273.15;
