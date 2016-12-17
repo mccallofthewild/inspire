@@ -18,7 +18,7 @@ function ClockController(){
         var day = date.getDate().toString();
         var month = date.getMonth();
         var months = "January, February, March, April, May, June, July, August, September, October, November, December".split(', ');
-        var readableMonth = `${months[month-1]}`;
+        var readableMonth = `${months[month]}`;
         var readableDay = `${day}${day[1]==1? "st" : day[1]==2? "nd" : day[1]==3? "rd" : "th"}`
         $('#date').html(readableDay);
         $('#month').html(readableMonth)
